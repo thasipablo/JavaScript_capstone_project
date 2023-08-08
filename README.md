@@ -4,7 +4,7 @@
 
   <div align="center">
   
-<h2 align="center">📕 Book Reviews 💬</h2>
+<h1 align="center">📕 Book Reviews 💬</h1>
 </div>
 
 
