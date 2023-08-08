@@ -1,5 +1,62 @@
-#container {
-  width: 50%;
-  height: 5rem;
-  background-color: aqua;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 0;
+  width: 100%;
+  top: 0;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  text-align: left;
+  padding-left: 1rem;
+}
+
+#logo {
+  width: 50px;
+  height: auto;
+  transform: scale(1.9);
+  position: relative;
+  left: 25px;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: right;
+  font-size: small;
+  font-style: oblique;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin-right: 2vw;
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+  #logo {
+    width: 100px;
+    height: auto;
+    transform: scale(2.5);
+    position: relative;
+    left: 75px;
+  }
+
+  footer {
+    font-size: larger;
+  }
 }
