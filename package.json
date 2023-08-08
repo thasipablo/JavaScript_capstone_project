@@ -30,5 +30,13 @@
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thasipablo/JavaScript_capstone_project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/thasipablo/JavaScript_capstone_project/issues"
+  },
+  "homepage": "https://github.com/thasipablo/JavaScript_capstone_project#readme"
 }
