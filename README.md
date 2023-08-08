@@ -1,4 +1,9 @@
 <a name="readme-top"></a>
+
+<div align="center">
+  <img src="./assets/logo.svg" alt="logo" width="140"  height="auto" />
+  <br/>
+
 <div align="center">
   <h1><b> Welcome to our JavaScript Capstone Project! 👋<br/></b></h1>
 
