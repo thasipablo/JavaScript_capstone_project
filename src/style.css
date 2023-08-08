@@ -10,7 +10,9 @@ body {
 header {
   background-color: #333;
   color: white;
-  padding: 1rem 0;
+  padding: 0;
+  width: 100%;
+  top: 0;
 }
 
 nav {
@@ -21,21 +23,40 @@ nav {
   padding-left: 1rem;
 }
 
-nav h1 {
-  margin-left: 1rem;
-}
-
 #logo {
-  width: 50px;  
+  width: 50px;
   height: auto;
+  transform: scale(1.9);
+  position: relative;
+  left: 25px; 
 }
 
 footer {
-    background-color: #333;
-    color: white;
-    padding: 1rem 0;
-    text-align: center;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: right;
+  font-size: large;
+  font-style: oblique;
+  position: absolute;
+  bottom: 0;
+  width: 99%;
+}
+
+footer p {
+  margin-right: 2vw;
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+  #logo {
+    width: 150px; 
+  }
+
+  #logo {
+    width: 100px;
+    height: auto;
+    transform: scale(2.5);
+    position: relative;
+    left: 75px; 
+  }
 }
