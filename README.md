@@ -2,6 +2,7 @@
 
 <div align="center">
   <img src="./assets/logo.svg" alt="logo" width="140"  height="auto" />
+  </div>
   <br/>
 
 <div align="center">
