@@ -4,8 +4,6 @@
   <img src="./assets/logoW.svg" alt="logo" width="280" height="auto" />
 </div>
 
-  <br/>
-
 <div align="center">
   <h1><b> Welcome to our JavaScript Capstone Project! 👋<br/></b></h1>
 
