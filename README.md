@@ -1,4 +1,15 @@
 <a name="readme-top"></a>
+<div align="center">
+  <h1><b> Welcome to our JavaScript Capstone Project! 👋<br/></b></h1>
+
+  <div align="center">
+  
+<h1 align="center">📕 Book Reviews 💬</h1>
+</div>
+
+
+
+</div>
 
 # 📗 Table of Contents
 
@@ -45,7 +56,7 @@ Building a Leaderboard with API calls
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-See live demo [here](https://movgto.github.io/leaderboard/dist).
+There's no live version yet []().
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -67,6 +78,16 @@ In order to run this project you need:
 
 - GitHub: [@Movgto](https://github.com/Movgto)
 - LinkedIn: [Gumaro Monroy](https://www.linkedin.com/in/gumaro-monroy-vazquez-1705aa165/)
+
+👤 **Pablo Thasi**
+
+- GitHub: [@thasipablo](https://github.com/thasipablo)
+- LinkedIn: [Pablo Thasi](https://www.linkedin.com/in/thasipablo)
+
+👤 **Cristian Villa**
+
+- GitHub: [@CVILLA09](https://github.com/CVILLA09)
+- LinkedIn: [Cristian Villa](www.linkedin.com/in/cristian-villa-5b518127b)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -93,7 +114,7 @@ If you like this project you can give me a good rating or leave a nice comment, 
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank you for taking your time for passing by.
+Thanks to all Microverse community and thank you for taking the time to stop by! 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
