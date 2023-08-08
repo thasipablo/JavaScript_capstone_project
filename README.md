@@ -79,12 +79,12 @@ In order to run this project you need:
 - GitHub: [@Movgto](https://github.com/Movgto)
 - LinkedIn: [Gumaro Monroy](https://www.linkedin.com/in/gumaro-monroy-vazquez-1705aa165/)
 
-  👤 **Pablo Thasi**
+👤 **Pablo Thasi**
 
 - GitHub: [@thasipablo](https://github.com/thasipablo)
 - LinkedIn: [Pablo Thasi](https://www.linkedin.com/in/thasipablo)
 
-  👤 **Cristian Villa**
+👤 **Cristian Villa**
 
 - GitHub: [@CVILLA09](https://github.com/CVILLA09)
 - LinkedIn: [Cristian Villa](www.linkedin.com/in/cristian-villa-5b518127b)
