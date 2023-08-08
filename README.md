@@ -1,18 +1,12 @@
 <a name="readme-top"></a>
-
 <div align="center">
   <h1><b> Welcome to our JavaScript Capstone Project! 👋<br/></b></h1>
-
+</div>
   <div align="center">
+  <h1 align="center">📕 Book Reviews 💬</h1>
+</div>
 <div align="center">
   <img src="./assets/logoW.svg" alt="logo" width="280" height="auto" />
-</div>
-  
-<h1 align="center">📕 Book Reviews 💬</h1>
-</div>
-
-
-
 </div>
 
 # 📗 Table of Contents
