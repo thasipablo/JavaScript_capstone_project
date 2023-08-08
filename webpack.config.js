@@ -14,12 +14,18 @@ module.exports = {
     open: true,
     hot: true,
     compress: true,
+    contentBase: path.resolve(__dirname, './src'), // Serve static files from src directory
+    watchContentBase: true, // Watch for changes in static files
   },
   module: {
     rules: [
       {
         test: /\.(scss)|(css)$/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+      {
+        test: /\.svg$/,
+        use: ['file-loader'],
       },
     ],
   },
