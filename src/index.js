@@ -11,8 +11,8 @@ displayBooks(books);
 
 const commentBtnTags = document.querySelectorAll(".comment-btn");
 commentBtnTags.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    const book = getBook(btn.id);
+  btn.addEventListener("click", async () => {
+    const book = await getBook(btn.id);
     console.log(btn.id, book);
   });
 });

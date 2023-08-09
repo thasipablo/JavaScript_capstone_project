@@ -45,6 +45,10 @@ nav {
   padding: 120px 60px;
 }
 
+.hidden {
+  display: none;
+}
+
 .main-content {
   position: relative;
 }

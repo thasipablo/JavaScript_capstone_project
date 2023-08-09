@@ -8,8 +8,8 @@ export const fetchBooks = async () => {
 
 export let books = (await fetchBooks()) || [];
 
-export const getBook = (id) => {
-  const book = books.find((book) => book.id === id);
-  console.log("Book: ", book);
+export const getBook = async (id) => {
+  const book = await books.find((book) => book.id === Number(id));
+  console.log("Books: ", books);
   return book;
 };
