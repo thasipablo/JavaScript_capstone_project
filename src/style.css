@@ -52,6 +52,10 @@ nav {
   margin-right: 60px;
 }
 
+li:hover {
+  color: lightyellow;
+}
+
 #books-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
