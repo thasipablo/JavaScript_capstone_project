@@ -10,7 +10,7 @@ const displayBooks = (data) => {
         <p>${book.authors[0].name}</p>
         <div class="button-container">
         <button class="like-btn"><i class="fa fa-thumbs-up"></i></button>
-        <button class="comment-btn"><i class="fa fa-comment"></i></button>
+        <button class="comment-btn" data="${book.id}"><i class="fa fa-comment"></i></button>
         </div>
     </div>
 `;
