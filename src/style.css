@@ -83,17 +83,34 @@ nav {
   font-weight: 500;
   height: auto;
   line-height: 1.2;
-  margin-bottom: 10px;
   letter-spacing: 0.5px;
 }
 
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.like-btn, .comment-btn {
+  display: flex; /* Set the display to flex */
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  padding: 10px 20px; 
+  cursor: pointer;
+  margin: auto;
+}
+
 .like-btn i, .comment-btn i {
-  font-size: 1.5rem; /* Adjust size */
-  color: #333; /* Adjust color */
+  font-size: 1.5rem;
+  color: #333; 
 }
 
 .like-btn:hover i, .comment-btn:hover i {
-  color: #555;
+  color: #999;
 }
 
 footer {
