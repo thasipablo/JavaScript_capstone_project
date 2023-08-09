@@ -105,7 +105,7 @@ footer p {
 }
 
 .like-btn,
-.comment-btn {
+.comment-btn, .reservation-btn {
   display: flex; /* Set the display to flex */
   flex-direction: row;
   justify-content: center;
@@ -118,13 +118,13 @@ footer p {
 }
 
 .like-btn i,
-.comment-btn i {
+.comment-btn i, .reservation-btn i {
   font-size: 1.5rem;
   color: #333;
 }
 
 .like-btn:hover i,
-.comment-btn:hover i {
+.comment-btn:hover i, .reservation-btn:hover i {
   color: #999;
 }
 
