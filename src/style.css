@@ -39,10 +39,10 @@ nav {
 }
 
 #navigationLinks {
+  display: none;
   width: 40%;
   text-decoration: none;
   list-style: none;
-  display: flex;
   gap: 20%;
   font-weight: bold;
   font-size: larger;
@@ -169,6 +169,10 @@ footer {
     transform: scale(2.5);
     position: relative;
     left: 75px;
+  }
+
+  #navigationLinks {
+    display: flex;
   }
 
   footer {
