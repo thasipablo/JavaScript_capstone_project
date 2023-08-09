@@ -22,16 +22,17 @@ module.exports = {
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
-        test: /\.svg$/,
-        use: ['file-loader'],
-      },
-      {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
         use: [{
           loader: 'file-loader',
           options: {
             name: '[name].[ext]',
-            outputPath: 'fonts/',
+            outputPath: (url, resourcePath) => {
+              if (/font/.test(resourcePath)) {
+                return `fonts/${url}`;
+              }
+              return `assets/${url}`;
+            },
           },
         }],
       },

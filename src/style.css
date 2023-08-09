@@ -17,6 +17,9 @@ header {
   top: 0;
   position: fixed;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between; /* Adjust this to control spacing */
+  align-items: center;
 }
 
 nav {
@@ -32,7 +35,23 @@ nav {
   height: auto;
   transform: scale(1.9);
   position: relative;
-  left: 25px;
+  left: auto; /* Remove the left position */
+  margin-left: 25px;
+}
+
+#navigationLinks {
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  justify-content:last baseline;
+  gap: 20%;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  margin-right: auto; 
 }
 
 #books-container {
