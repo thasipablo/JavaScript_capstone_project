@@ -11,6 +11,7 @@ const displayBooks = (data) => {
         <div class="button-container">
         <button class="like-btn"><i class="fa fa-thumbs-up"></i></button>
         <button class="comment-btn"><i class="fa fa-comment"></i></button>
+        <button class="reservation-btn"><i class="fa fa-clipboard"></i></button>
         </div>
     </div>
 `;

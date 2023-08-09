@@ -17,14 +17,16 @@ header {
   top: 0;
   position: fixed;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between; /* Adjust this to control spacing */
+  align-items: center;
 }
 
 nav {
   display: flex;
   align-items: center;
-  justify-content: start;
-  text-align: left;
-  padding-left: 1rem;
+  justify-content: space-between;
+  width: 100%;
 }
 
 #logo {
@@ -32,13 +34,32 @@ nav {
   height: auto;
   transform: scale(1.9);
   position: relative;
-  left: 25px;
+  left: auto; /* Remove the left position */
+  margin-left: 25px;
+}
+
+#navigationLinks {
+  display: none;
+  width: 40%;
+  text-decoration: none;
+  list-style: none;
+  gap: 20%;
+  font-weight: bold;
+  font-size: larger;
+  color: #fff;
+  cursor: pointer;
+  justify-content: space-between;
+  margin-right: 60px;
+}
+
+li:hover {
+  color: lightyellow;
 }
 
 #books-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* This will create a responsive number of columns */
-  gap: 60px; /* Adjust the space between the grid items */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 60px;
   padding: 120px 60px;
 }
 
@@ -65,7 +86,7 @@ nav {
 }
 
 footer p {
-  margin-right: 2vw;
+  margin-right: 4.5vw;
 }
 
 .book-card h2,
@@ -84,6 +105,9 @@ footer p {
   letter-spacing: 0.5px;
   text-transform: capitalize;
   border-bottom: 1px solid #333;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .book-card p {
@@ -102,7 +126,8 @@ footer p {
 }
 
 .like-btn,
-.comment-btn {
+.comment-btn,
+.reservation-btn {
   display: flex; /* Set the display to flex */
   flex-direction: row;
   justify-content: center;
@@ -115,13 +140,15 @@ footer p {
 }
 
 .like-btn i,
-.comment-btn i {
+.comment-btn i,
+.reservation-btn i {
   font-size: 1.5rem;
   color: #333;
 }
 
 .like-btn:hover i,
-.comment-btn:hover i {
+.comment-btn:hover i,
+.reservation-btn:hover i {
   color: #999;
 }
 
@@ -145,6 +172,10 @@ footer {
     transform: scale(2.5);
     position: relative;
     left: 75px;
+  }
+
+  #navigationLinks {
+    display: flex;
   }
 
   footer {
