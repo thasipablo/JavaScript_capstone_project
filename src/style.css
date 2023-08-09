@@ -25,7 +25,7 @@ header {
 nav {
   display: flex;
   align-items: center;
-  justify-content: space-between; 
+  justify-content: space-between;
   width: 100%;
 }
 
@@ -59,7 +59,7 @@ li:hover {
 #books-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 60px; 
+  gap: 60px;
   padding: 120px 60px;
 }
 
@@ -126,7 +126,8 @@ footer p {
 }
 
 .like-btn,
-.comment-btn, .reservation-btn {
+.comment-btn,
+.reservation-btn {
   display: flex; /* Set the display to flex */
   flex-direction: row;
   justify-content: center;
@@ -139,13 +140,15 @@ footer p {
 }
 
 .like-btn i,
-.comment-btn i, .reservation-btn i {
+.comment-btn i,
+.reservation-btn i {
   font-size: 1.5rem;
   color: #333;
 }
 
 .like-btn:hover i,
-.comment-btn:hover i, .reservation-btn:hover i {
+.comment-btn:hover i,
+.reservation-btn:hover i {
   color: #999;
 }
 
