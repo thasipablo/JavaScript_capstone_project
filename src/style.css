@@ -25,9 +25,8 @@ header {
 nav {
   display: flex;
   align-items: center;
-  justify-content: start;
-  text-align: left;
-  padding-left: 1rem;
+  justify-content: space-between; 
+  width: 100%;
 }
 
 #logo {
@@ -40,24 +39,23 @@ nav {
 }
 
 #navigationLinks {
+  width: 40%;
   text-decoration: none;
   list-style: none;
   display: flex;
-  justify-content:last baseline;
   gap: 20%;
   font-weight: bold;
+  font-size: larger;
   color: #fff;
   cursor: pointer;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  margin-right: auto; 
+  justify-content: space-between;
+  margin-right: 60px;
 }
 
 #books-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* This will create a responsive number of columns */
-  gap: 60px; /* Adjust the space between the grid items */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 60px; 
   padding: 120px 60px;
 }
 
@@ -84,7 +82,7 @@ nav {
 }
 
 footer p {
-  margin-right: 2vw;
+  margin-right: 4.5vw;
 }
 
 .book-card h2,
