@@ -4,14 +4,14 @@ const displayBooks = (data) => {
 
   data.forEach((book) => {
     const bookCard = `
-            <div class="book-card">
-            <img src="${book.formats['image/jpeg']}" alt="${book.title}">
-                <h2>${book.title}</h2>
-                <p>${book.authors[0].name}</p>
-                <button class="like-btn">Like</button>
-                <button class="comment-btn">Comment</button>
-            </div>
-        `;
+    <div class="book-card">
+        <img src="${book.formats['image/jpeg']}" alt="${book.title}">
+        <h2>${book.title}</h2>
+        <p>${book.authors[0].name}</p>
+        <button class="like-btn"><i class="fa fa-thumbs-up"></i></button>
+        <button class="comment-btn"><i class="fa fa-comment"></i></button>
+    </div>
+`;
     container.innerHTML += bookCard;
   });
 

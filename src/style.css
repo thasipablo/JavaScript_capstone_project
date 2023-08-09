@@ -43,7 +43,7 @@ nav {
 }
 
 .book-card {
-  background-color: rgba(120, 120, 120, 0.3); 
+  background-color: rgba(185, 185, 185, 0.3); 
   border: 0.5px solid #333;
   border-radius: 10px;
   overflow: hidden;
@@ -72,24 +72,28 @@ nav {
 }
 
 .book-card h2 {
-  height: auto;  
-  line-height: 1.5; 
+  font-weight: 700;
+  height: auto;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  text-transform: capitalize;
 }
 
 .book-card p {
-  height: auto;  
-  line-height: 1.2;  
+  font-weight: 500;
+  height: auto;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
 }
 
-.like-btn, .comment-btn {
-  padding: 5px 10px;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s;
+.like-btn i, .comment-btn i {
+  font-size: 1.5rem; /* Adjust size */
+  color: #333; /* Adjust color */
 }
 
-.like-btn:hover, .comment-btn:hover {
-  background-color: #e0e0e0;
+.like-btn:hover i, .comment-btn:hover i {
+  color: #555;
 }
 
 footer {
