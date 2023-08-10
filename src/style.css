@@ -155,7 +155,7 @@ footer p {
 }
 
 .like-btn {
-  position: relative; 
+  position: relative;
 }
 
 .likes-counter {
@@ -163,7 +163,7 @@ footer p {
   top: 0;
   right: 0;
   background-color: red;
-  border-radius: 50%; 
+  border-radius: 50%;
   padding: 2px 5px;
   font-size: 0.8rem;
   color: white;
