@@ -2,7 +2,7 @@ import fetchLikes from './likes.js';
 import displayReservations from './reservationsPopup.js';
 
 const LIKES_API_URL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/I11ph9MsLdYF8zFhvLLF/likes/';
-const RESERVATION_API_URL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/I11ph9MsLdYF8zFhvLLF/reservations'
+const RESERVATION_API_URL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/I11ph9MsLdYF8zFhvLLF/reservations';
 
 const displayBooks = async (data) => {
   const container = document.createElement('div');
