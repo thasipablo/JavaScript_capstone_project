@@ -1,6 +1,6 @@
 import displayCommentPopup from './commentPopup.js';
 import fetchLikes from './likes.js';
-import displayReservations from './reservationsPopup.js';
+import { displayReservations } from './reservationsPopup.js';
 
 const LIKES_API_URL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/I11ph9MsLdYF8zFhvLLF/likes/';
 const RESERVATION_API_URL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/I11ph9MsLdYF8zFhvLLF/reservations';
@@ -32,8 +32,9 @@ const displayBooks = async (data) => {
       `;
     container.appendChild(bookCard);
 
-    bookCard.querySelector('.reservation-btn').addEventListener('click', () => {
-      document.body.appendChild(displayReservations(RESERVATION_API_URL, book));
+    bookCard.querySelector('.reservation-btn').addEventListener('click', async () => {
+      const reservations = await displayReservations(RESERVATION_API_URL, book);
+      document.body.appendChild(reservations);
     });
     //
     bookCard.querySelector('.comment-btn').addEventListener('click', () => {

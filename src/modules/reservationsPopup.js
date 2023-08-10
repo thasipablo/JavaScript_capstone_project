@@ -1,28 +1,26 @@
-const populateReservations = async (apiURL, container) => {
+const populateReservations = (reservationData, container) => {
   container.innerHTML = '';
-  const request = await fetch(apiURL);
-  const result = await request.json();
   let reservCount = 0;
-  if (result.length > 0) {
-    reservCount = result.length;
+  if (reservationData.length > 0) {
+    reservCount = reservationData.length;
   } else {
     reservCount = 0;
   }
   container.parentElement.querySelector(
-    '#reservation-counter',
+    '#reservation-counter'
   ).textContent = `Reservations (${reservCount})`;
-  if (result.length > 0) {
-    result.forEach((reserv) => {
+  if (reservationData.length > 0) {
+    reservationData.forEach((reserv) => {
       const reservEl = document.createElement('li');
       reservEl.className = 'reservation';
-      reservEl.textContent = `${reserv.date_start.split('-').join('/')} - 
-            ${reserv.date_end.split('-').join('/')} by ${reserv.username}`;
+      reservEl.textContent = `${reserv.date_start} - 
+            ${reserv.date_end} by ${reserv.username}`;
       container.appendChild(reservEl);
     });
   }
 };
 
-const displayReservations = (apiURL, bookData) => {
+const displayReservations = async (apiURL, bookData) => {
   const curtain = document.createElement('div');
   curtain.id = 'curtain';
   const reservationCtr = document.createElement('div');
@@ -55,8 +53,9 @@ const displayReservations = (apiURL, bookData) => {
   });
 
   const reservationList = reservationCtr.querySelector('#reservation-list');
-
-  populateReservations(`${apiURL}?item_id=${bookData.id}`, reservationList);
+  const request = await fetch(`${apiURL}?item_id=${bookData.id}`);
+  const result = await request.json();
+  populateReservations(result, reservationList);
 
   reservationCtr
     .querySelector('#reservation-btn')
@@ -80,10 +79,9 @@ const displayReservations = (apiURL, bookData) => {
         });
 
         if (response.ok) {
-          populateReservations(
-            `${apiURL}?item_id=${bookData.id}`,
-            reservationList,
-          );
+          const request = await fetch(`${apiURL}?item_id=${bookData.id}`);
+          const result = await request.json();
+          populateReservations(result, reservationList);
         }
       }
     });
@@ -91,4 +89,4 @@ const displayReservations = (apiURL, bookData) => {
   return curtain;
 };
 
-export default displayReservations;
+export { displayReservations, populateReservations };
