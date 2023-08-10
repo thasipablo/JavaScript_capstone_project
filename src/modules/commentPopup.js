@@ -16,13 +16,15 @@ const populateComments = async (bookId, container) => {
   container.innerHTML = "";
   const comments = await getBooksDetails(bookId);
   document.querySelector(".comments-count").innerHTML = comments.length || 0;
-  comments.forEach((comment) => {
-    const commentTag = document.createElement("li");
-    commentTag.innerHTML = `
+  if (comments.length) {
+    comments.forEach((comment) => {
+      const commentTag = document.createElement("li");
+      commentTag.innerHTML = `
         <li>${comment.creation_date} ${comment.username} : ${comment.comment}</li>
     `;
-    container.appendChild(commentTag);
-  });
+      container.appendChild(commentTag);
+    });
+  }
 };
 
 const displayCommentPopup = async (bookData) => {
@@ -95,6 +97,9 @@ const displayCommentPopup = async (bookData) => {
           }),
         }
       );
+      if (response.ok) {
+        populateComments(bookData.id, commentsList);
+      }
     }
   });
 };
