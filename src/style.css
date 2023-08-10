@@ -20,6 +20,7 @@ header {
   display: flex;
   justify-content: space-between; /* Adjust this to control spacing */
   align-items: center;
+  z-index: 1;
 }
 
 nav {
