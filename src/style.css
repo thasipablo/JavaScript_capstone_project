@@ -153,6 +153,22 @@ footer p {
   color: #999;
 }
 
+.like-btn {
+  position: relative; /* Add this to position the counter circle relative to the button */
+}
+
+.likes-counter {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: red;
+  border-radius: 50%; 
+  padding: 2px 5px;
+  font-size: 0.8rem;
+  color: white;
+  transform: translate(7%, 14%);
+}
+
 footer {
   background-color: rgba(60, 60, 60, 0.98);
   color: white;

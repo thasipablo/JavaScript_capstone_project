@@ -11,18 +11,20 @@ const displayBooks = async (data) => {
   data.forEach((book) => {
     const bookLikes = likesData.find((like) => like.item_id === book.id) || { likes: 0 };
     const bookCard = `
-      <div class="book-card">
-        <img src="${book.formats['image/jpeg']}" alt="${book.title}">
-        <h2>${book.title}</h2>
-        <p>${book.authors[0].name}</p>
-        <p>Likes: ${bookLikes.likes}</p>
-        <div class="button-container">
-          <button class="like-btn"><i class="fa fa-thumbs-up"></i></button>
-          <button class="comment-btn"><i class="fa fa-comment"></i></button>
-          <button class="reservation-btn"><i class="fa fa-clipboard"></i></button>
-        </div>
-      </div>
-    `;
+  <div class="book-card">
+    <img src="${book.formats['image/jpeg']}" alt="${book.title}">
+    <h2>${book.title}</h2>
+    <p class="author">${book.authors[0].name}</p>
+    <div class="button-container">
+      <button class="like-btn">
+        <i class="fa fa-thumbs-up"></i>
+        <span class="likes-counter">${bookLikes.likes}</span>
+      </button>
+      <button class="comment-btn"><i class="fa fa-comment"></i></button>
+      <button class="reservation-btn"><i class="fa fa-clipboard"></i></button>
+    </div>
+  </div>
+`;
     container.innerHTML += bookCard;
   });
 
@@ -41,12 +43,12 @@ const displayBooks = async (data) => {
       });
 
       if (response.ok) {
-        const likeCountElement = btn.parentElement.previousElementSibling;
-        const currentLikes = parseInt(likeCountElement.textContent.split(": ")[1], 10);
-        likeCountElement.textContent = `Likes: ${currentLikes + 1}`;
+        const likeCountElement = btn.querySelector('.likes-counter');
+        const currentLikes = parseInt(likeCountElement.textContent, 10);
+        likeCountElement.textContent = `${currentLikes + 1}`;
       }
     });
-  });  
+  });
 };
 
 export default displayBooks;
