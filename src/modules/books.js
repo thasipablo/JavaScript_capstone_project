@@ -1,5 +1,7 @@
 import fetchLikes from './likes.js';
 
+const LIKES_API_URL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/I11ph9MsLdYF8zFhvLLF/likes/';
+
 const displayBooks = async (data) => {
   const container = document.createElement('div');
   container.id = 'books-container';
@@ -25,6 +27,26 @@ const displayBooks = async (data) => {
   });
 
   document.body.insertBefore(container, document.querySelector('footer'));
+  document.querySelectorAll('.like-btn').forEach((btn, index) => {
+    btn.addEventListener('click', async () => {
+      const book = data[index];
+      const response = await fetch(LIKES_API_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          item_id: book.id,
+        }),
+      });
+
+      if (response.ok) {
+        const likeCountElement = btn.parentElement.previousElementSibling;
+        const currentLikes = parseInt(likeCountElement.textContent.split(": ")[1], 10);
+        likeCountElement.textContent = `Likes: ${currentLikes + 1}`;
+      }
+    });
+  });  
 };
 
 export default displayBooks;
