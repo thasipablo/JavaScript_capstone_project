@@ -1,6 +1,9 @@
+import displayCommentPopup from './commentPopup.js';
 import fetchLikes from './likes.js';
+import displayReservations from './reservationsPopup.js';
 
 const LIKES_API_URL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/I11ph9MsLdYF8zFhvLLF/likes/';
+const RESERVATION_API_URL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/I11ph9MsLdYF8zFhvLLF/reservations';
 
 const displayBooks = async (data) => {
   const container = document.createElement('div');
@@ -9,23 +12,33 @@ const displayBooks = async (data) => {
   const likesData = await fetchLikes();
 
   data.forEach((book) => {
-    const bookLikes = likesData.find((like) => like.item_id === book.id) || { likes: 0 };
-    const bookCard = `
-  <div class="book-card">
-    <img src="${book.formats['image/jpeg']}" alt="${book.title}">
-    <h2>${book.title}</h2>
-    <p class="author">${book.authors[0].name}</p>
-    <div class="button-container">
-      <button class="like-btn">
-        <i class="fa fa-thumbs-up"></i>
-        <span class="likes-counter">${bookLikes.likes}</span>
-      </button>
-      <button class="comment-btn"><i class="fa fa-comment"></i></button>
-      <button class="reservation-btn"><i class="fa fa-clipboard"></i></button>
-    </div>
-  </div>
-`;
-    container.innerHTML += bookCard;
+    const bookLikes = likesData.find((like) => like.item_id === book.id) || {
+      likes: 0,
+    };
+    const bookCard = document.createElement('div');
+    bookCard.className = 'book-card';
+    bookCard.innerHTML = `
+      <img src="${book.formats['image/jpeg']}" alt="${book.title}">
+      <h2>${book.title}</h2>
+      <p class="author">${book.authors[0].name}</p>
+      <div class="button-container">
+        <button class="like-btn">
+          <i class="fa fa-thumbs-up"></i>
+          <span class="likes-counter">${bookLikes.likes}</span>
+        </button>
+        <button class="comment-btn"><i class="fa fa-comment"></i></button>
+        <button class="reservation-btn"><i class="fa fa-clipboard"></i></button>
+      </div>
+      `;
+    container.appendChild(bookCard);
+
+    bookCard.querySelector('.reservation-btn').addEventListener('click', () => {
+      document.body.appendChild(displayReservations(RESERVATION_API_URL, book));
+    });
+    //
+    bookCard.querySelector('.comment-btn').addEventListener('click', () => {
+      displayCommentPopup(RESERVATION_API_URL, book);
+    });
   });
 
   document.body.insertBefore(container, document.querySelector('footer'));

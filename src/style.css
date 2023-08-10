@@ -5,7 +5,7 @@
 body {
   margin: 0;
   scroll-behavior: smooth;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   background-color: #fff;
 }
 
@@ -85,6 +85,60 @@ li:hover {
   object-fit: cover;
   border-bottom: 1px solid #333;
   margin-bottom: -1vh;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form div {
+  padding: 0.5rem;
+}
+
+.form input,
+.form textarea {
+  width: 230px;
+  border: 2px solid #999;
+  outline: none;
+  padding: 0.5em;
+  border-radius: 4px;
+  color: #999;
+  font-family: sans-serif;
+}
+
+.form input:focus,
+.form textarea:focus {
+  color: #333;
+  border: 2px solid #333;
+}
+
+.form button {
+  border: 2px solid #333;
+  padding: 0.5rem;
+  background: #030012;
+  color: #fff;
+  border-radius: 4px;
+  width: 50%;
+  transition: all 0.25s ease-in-out;
+}
+
+.form button:hover {
+  cursor: pointer;
+  box-shadow: 6px 6px 16px #555;
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 35%;
+  max-height: 90vh;
+  overflow: auto;
 }
 
 footer p {
@@ -181,6 +235,39 @@ footer {
   width: 100%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+/* Reservation popup */
+
+#curtain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #9996;
+  backdrop-filter: blur(10px);
+}
+
+#close-btn {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 2rem;
+}
+
+#close-btn:hover {
+  cursor: pointer;
+  color: white;
+}
+
+/* End of Reservation popup */
 
 /* Media query for larger screens */
 @media (min-width: 768px) {
