@@ -20,6 +20,7 @@ header {
   display: flex;
   justify-content: space-between; /* Adjust this to control spacing */
   align-items: center;
+  z-index: 1;
 }
 
 nav {
@@ -151,6 +152,22 @@ footer p {
 .comment-btn:hover i,
 .reservation-btn:hover i {
   color: #999;
+}
+
+.like-btn {
+  position: relative;
+}
+
+.likes-counter {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: red;
+  border-radius: 50%;
+  padding: 2px 5px;
+  font-size: 0.8rem;
+  color: white;
+  transform: translate(5%, 15%);
 }
 
 footer {
