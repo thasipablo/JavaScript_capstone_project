@@ -155,7 +155,7 @@ footer p {
 }
 
 .like-btn {
-  position: relative; /* Add this to position the counter circle relative to the button */
+  position: relative; 
 }
 
 .likes-counter {
@@ -167,7 +167,7 @@ footer p {
   padding: 2px 5px;
   font-size: 0.8rem;
   color: white;
-  transform: translate(7%, 14%);
+  transform: translate(5%, 15%);
 }
 
 footer {
