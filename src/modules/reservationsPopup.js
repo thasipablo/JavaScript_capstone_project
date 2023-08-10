@@ -7,7 +7,7 @@ const populateReservations = (reservationData, container) => {
     reservCount = 0;
   }
   container.parentElement.querySelector(
-    '#reservation-counter'
+    '#reservation-counter',
   ).textContent = `Reservations (${reservCount})`;
   if (reservationData.length > 0) {
     reservationData.forEach((reserv) => {
