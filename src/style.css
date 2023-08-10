@@ -199,28 +199,6 @@ footer {
   backdrop-filter: blur(10px);
 }
 
-#reservation-ctr {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-#reservation-btn {
-  background-color: darkolivegreen;
-  padding: 0.4rem;
-  border-radius: 0.3rem;
-  border: transparent;
-  color: white;
-}
-
-#reservation-btn:hover {
-  cursor: pointer;
-  background-color: aquamarine;
-}
-
 #close-btn {
   background-color: transparent;
   border: none;
