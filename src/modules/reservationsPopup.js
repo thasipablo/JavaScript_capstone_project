@@ -26,7 +26,7 @@ const displayReservations = (apiURL, bookData) => {
     const curtain = document.createElement('div');
     curtain.id = 'curtain';
     const reservationCtr = document.createElement('div');
-    reservationCtr.id = 'reservation-ctr';
+    reservationCtr.className = 'popup-content';
     reservationCtr.innerHTML = `<img src="${bookData.formats['image/jpeg']}" alt="${bookData.title}">
                                 <h2>${bookData.title}</h2>
                                 <p class="author">${bookData.authors[0].name}</p>
@@ -34,10 +34,12 @@ const displayReservations = (apiURL, bookData) => {
                                 <ul id='reservation-list'>
                                 </ul>
                                 <p>Date format: mm/dd/yyyy</p>
-                                <input name='username' id='username' placeholder='Username' type='text' />
-                                <label for='startdate'>Start date</label><input name='startdate' id='startdate' type='date' />
-                                <label for='enddate'>End date</label><input name='enddate' id='enddate' type='date' />
-                                <button type='button' id='reservation-btn'>Add reservation</button>
+                                <form class="form">
+                                    <div><input name='username' id='username' placeholder='Username' type='text' /></div>
+                                    <div><label for='startdate'>Start date</label><input name='startdate' id='startdate' type='date' /></div>
+                                    <div><label for='enddate'>End date</label><input name='enddate' id='enddate' type='date' /></div>
+                                    <button type='button' id='reservation-btn'>Add reservation</button>
+                                </form>
                                 `
     curtain.appendChild(reservationCtr);
     const closeBtn = document.createElement('button');
