@@ -5,7 +5,7 @@
 body {
   margin: 0;
   scroll-behavior: smooth;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   background-color: #fff;
 }
 
@@ -60,7 +60,41 @@ li:hover {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 60px;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(200px, 1fr)
+  ); /* This will create a responsive number of columns */
+  gap: 60px; /* Adjust the space between the grid items */
   padding: 120px 60px;
+}
+
+.hidden {
+  display: none;
+}
+
+.main-content {
+  position: relative;
+}
+
+.comment-popup {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: #000000ea;
+  height: 100vh;
+  z-index: 9;
+  text-align: center;
+}
+
+.comment-popup__content {
+  margin: 0 auto;
+  margin-top: 2rem;
+  border-radius: 8px;
+  background-color: #fff;
+  width: 70%;
+  padding: 2rem;
 }
 
 .book-card {
