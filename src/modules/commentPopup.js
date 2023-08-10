@@ -12,6 +12,19 @@ const getBooksDetails = async (bookId) => {
   return data;
 };
 
+const populateComments = async (bookId, container) => {
+  container.innerHTML = "";
+  const comments = await getBooksDetails(bookId);
+  document.querySelector(".comments-count").innerHTML = comments.length || 0;
+  comments.forEach((comment) => {
+    const commentTag = document.createElement("li");
+    commentTag.innerHTML = `
+        <li>${comment.creation_date} ${comment.username} : ${comment.comment}</li>
+    `;
+    container.appendChild(commentTag);
+  });
+};
+
 const displayCommentPopup = async (bookData) => {
   // comments
   const comments = await getBooksDetails(bookData.id);
@@ -26,7 +39,7 @@ const displayCommentPopup = async (bookData) => {
         <h2>${bookData.title}</h2>
         <p class="author">${bookData.authors[0].name}</p>
         <div class="comments-container">
-            <h3>Comments (0)</h3>
+            <h3>Comments (<span class="comments-count"></span>)</h3>
             <ul class="comments-list"></ul>
         </div>
         <h3>Leave your comment</h3>
@@ -56,6 +69,12 @@ const displayCommentPopup = async (bookData) => {
 
   const form = document.querySelector(".form");
   const submitBtn = form.querySelector("#commit-btn");
+  const commentsList = document.querySelector(".comments-list");
+  console.log(commentsList);
+
+  //   populate comments on the popup load
+  populateComments(bookData.id, commentsList);
+
   submitBtn.addEventListener("click", async (e) => {
     e.preventDefault();
     const name = form.querySelector(".name").value;
@@ -76,11 +95,6 @@ const displayCommentPopup = async (bookData) => {
           }),
         }
       );
-
-      if (response.ok) {
-        const bookData = await getBooksDetails(bookData.id);
-        console.log(bookData);
-      }
     }
   });
 };
