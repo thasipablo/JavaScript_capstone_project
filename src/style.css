@@ -182,6 +182,43 @@ footer {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+#curtain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #99999966;
+  backdrop-filter: blur(10px);
+}
+
+#reservation-ctr {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#close-btn {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 2rem;
+}
+
+#close-btn:hover {
+  cursor: pointer;
+  color: white;
+}
+
 /* Media query for larger screens */
 @media (min-width: 768px) {
   #logo {
