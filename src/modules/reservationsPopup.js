@@ -1,4 +1,5 @@
 const populateReservations = async (apiURL, container) => {
+  container.innerHTML = '';
   const request = await fetch(apiURL);
   const result = await request.json();
   let reservCount = 0;
