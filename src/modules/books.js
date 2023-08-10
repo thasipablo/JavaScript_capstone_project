@@ -30,7 +30,7 @@ const displayBooks = async (data) => {
     container.appendChild(bookCard);
 
     bookCard.querySelector('.reservation-btn').addEventListener('click', () => {
-      displayReservations(RESERVATION_API_URL, book);
+      document.body.appendChild(displayReservations(RESERVATION_API_URL, book));
     });
   });
 
