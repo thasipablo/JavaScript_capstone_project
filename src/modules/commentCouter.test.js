@@ -18,14 +18,14 @@ test("Comment counter", () => {
       username: "Jo",
     },
   ];
-  const reservationCtr = document.createElement("div");
-  const reservationCounter = document.createElement("h2");
-  reservationCounter.id = "reservation-counter";
-  const reservationList = document.createElement("ul");
-  reservationCtr.append(reservationCounter, reservationList);
-  populateComments(reservationData, reservationList);
+  const commentCtr = document.createElement("div");
+  const commentCounter = document.createElement("h2");
+  commentCounter.id = "reservation-counter";
+  const commentsList = document.createElement("ul");
+  commentCtr.append(commentCounter, commentsList);
+  populateComments(reservationData, commentsList);
 
-  const reservationCount = reservationList.querySelectorAll("li").length;
+  const reservationCount = commentsList.querySelectorAll("li").length;
 
   expect(reservationCount).toBe(3);
 });
