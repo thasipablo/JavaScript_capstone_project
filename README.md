@@ -6,7 +6,7 @@
   <h1 align="center">📕 Book Reviews 💬</h1>
 </div>
 <div align="center">
-  <img src="./assets/logoW.svg" alt="logo" width="280" height="auto" />
+  <img src="./assets/presentation.jpeg" alt="logo" width="400" height="auto" />
 </div>
 
 # 📗 Table of Contents
