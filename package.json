@@ -46,6 +46,7 @@
   },
   "homepage": "https://github.com/thasipablo/JavaScript_capstone_project#readme",
   "dependencies": {
+    "canvas": "^2.11.2",
     "font-awesome": "^4.7.0"
   }
 }
