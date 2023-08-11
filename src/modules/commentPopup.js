@@ -12,15 +12,15 @@ const getBooksDetails = async (bookId) => {
   return data;
 };
 
-const populateComments = async (bookId, container) => {
+const populateComments = async (comments, container) => {
   container.innerHTML = '';
-  const comments = await getBooksDetails(bookId);
-  document.querySelector('.comments-count').innerHTML = comments.length || 0;
+  const commentsCount = comments.length ? comments.length : 0;
+  container.parentElement.querySelector('#comments-count').textContent = `Comments (${commentsCount})`;
   if (comments.length) {
     comments.forEach((comment) => {
       const commentTag = document.createElement('li');
       commentTag.innerHTML = `
-        <li>${comment.creation_date} ${comment.username} : ${comment.comment}</li>
+        ${comment.creation_date} ${comment.username} : ${comment.comment}
     `;
       container.appendChild(commentTag);
     });
@@ -37,7 +37,7 @@ const displayCommentPopup = async (bookData) => {
         <h2>${bookData.title}</h2>
         <p class="author">${bookData.authors[0].name}</p>
         <div class="comments-container">
-            <h3>Comments (<span class="comments-count"></span>)</h3>
+            <h3 id="comments-count"></h3>
             <ul class="comments-list"></ul>
         </div>
         <h3>Leave your comment</h3>
@@ -67,10 +67,11 @@ const displayCommentPopup = async (bookData) => {
 
   const form = document.querySelector('.form');
   const submitBtn = form.querySelector('#commit-btn');
-  const commentsList = document.querySelector('.comments-list');
+  const commentsListTag = document.querySelector('.comments-list');
 
   //   populate comments on the popup load
-  populateComments(bookData.id, commentsList);
+  const listOfComments = await getBooksDetails(bookData.id);
+  populateComments(listOfComments, commentsListTag);
 
   submitBtn.addEventListener('click', async (e) => {
     e.preventDefault();
@@ -93,10 +94,11 @@ const displayCommentPopup = async (bookData) => {
         },
       );
       if (response.ok) {
-        populateComments(bookData.id, commentsList);
+        const listOfComments = await getBooksDetails(bookData.id);
+        populateComments(listOfComments, commentsListTag);
       }
     }
   });
 };
 
-export default displayCommentPopup;
+export { populateComments, displayCommentPopup };
