@@ -40,7 +40,7 @@ Building a Leaderboard with API calls
   <summary>Languages</summary>
   <ul>
     <li>HTML</li>
-    <li>SASS</li>
+    <li>CSS</li>
     <li>JavaScript</li>
   </ul>
 </details>
