@@ -54,7 +54,7 @@ Building a Leaderboard with API calls
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-There's no live version yet []().
+The live version [here](https://thasipablo.github.io/JavaScript_capstone_project/dist/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
