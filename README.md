@@ -30,7 +30,7 @@
 
 **Book Reviews Webapp with Webpack**
  
-Discover a curated collection of books with our Book Reviews webapp. Users can "like" titles, leave comments, and for larger teams, reserve books. Built with Webpack for optimized performance, the app seamlessly integrates with external APIs to fetch book details and manage user interactions.
+Discover a curated collection of books with our Book Reviews webapp. Users can "like" titles, leave comments, and reserve books. Built with Webpack for optimized performance, the app seamlessly integrates with external APIs to fetch book details and manage user interactions.
 
 ## 🛠 Built With <a name="built-with"></a>
 
