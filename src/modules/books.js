@@ -36,9 +36,9 @@ const displayBooks = async (data) => {
       const reservations = await displayReservations(RESERVATION_API_URL, book);
       document.body.appendChild(reservations);
     });
-    //
+
     bookCard.querySelector('.comment-btn').addEventListener('click', () => {
-      displayCommentPopup(RESERVATION_API_URL, book);
+      displayCommentPopup(book);
     });
   });
 
