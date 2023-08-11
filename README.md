@@ -47,8 +47,9 @@ Discover a curated collection of books with our Book Reviews webapp. Users can "
 
 ### Key Features <a name="key-features"></a>
 
-- Webpack bundle using ES6 modules and SASS styling.
-- Api calls to fetch data and fill the leaderboard.
+- Bundled with Webpack, utilizing ES6 modules.
+- API calls to dynamically fetch and display books.
+- Features to "like" titles, comment, and for larger teams, reserve books.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
