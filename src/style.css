@@ -1,0 +1,289 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  scroll-behavior: smooth;
+  font-family: "Arial", sans-serif;
+  background-color: #fff;
+}
+
+header {
+  background-color: rgba(60, 60, 60, 0.98);
+  color: white;
+  padding: 0;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between; /* Adjust this to control spacing */
+  align-items: center;
+  z-index: 1;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#logo {
+  width: 50px;
+  height: auto;
+  transform: scale(1.9);
+  position: relative;
+  left: auto; /* Remove the left position */
+  margin-left: 25px;
+}
+
+#navigationLinks {
+  display: none;
+  width: 40%;
+  text-decoration: none;
+  list-style: none;
+  gap: 20%;
+  font-weight: bold;
+  font-size: larger;
+  color: #fff;
+  cursor: pointer;
+  justify-content: space-between;
+  margin-right: 60px;
+}
+
+li:hover {
+  color: lightyellow;
+}
+
+#books-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 60px;
+  padding: 120px 60px;
+}
+
+.book-card {
+  background-color: rgba(185, 185, 185, 0.33);
+  border: 2px solid #333;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.9s ease, background-color 0.6s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  height: auto;
+}
+
+.book-card:hover {
+  transform: scale(1.05);
+  background-color: lightyellow;
+}
+
+.book-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-bottom: 1px solid #333;
+  margin-bottom: -1vh;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form div {
+  padding: 0.5rem;
+}
+
+.form input,
+.form textarea {
+  width: 230px;
+  border: 2px solid #999;
+  outline: none;
+  padding: 0.5em;
+  border-radius: 4px;
+  color: #999;
+  font-family: sans-serif;
+}
+
+.form input:focus,
+.form textarea:focus {
+  color: #333;
+  border: 2px solid #333;
+}
+
+.form button {
+  border: 2px solid #333;
+  padding: 0.5rem;
+  background: #030012;
+  color: #fff;
+  border-radius: 4px;
+  width: 50%;
+  transition: all 0.25s ease-in-out;
+}
+
+.form button:hover {
+  cursor: pointer;
+  box-shadow: 6px 6px 16px #555;
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 35%;
+  max-height: 90vh;
+  overflow: auto;
+}
+
+footer p {
+  margin-right: 4.5vw;
+}
+
+.book-card h2,
+.book-card p {
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+  white-space: nowrap;
+  overflow: auto;
+}
+
+.book-card h2 {
+  font-weight: 700;
+  height: auto;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  text-transform: capitalize;
+  border-bottom: 1px solid #333;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.book-card p {
+  font-weight: 500;
+  height: auto;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid #333;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.like-btn,
+.comment-btn,
+.reservation-btn {
+  display: flex; /* Set the display to flex */
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: auto;
+}
+
+.like-btn i,
+.comment-btn i,
+.reservation-btn i {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.like-btn:hover i,
+.comment-btn:hover i,
+.reservation-btn:hover i {
+  color: #999;
+}
+
+.like-btn {
+  position: relative;
+}
+
+.likes-counter {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: red;
+  border-radius: 50%;
+  padding: 2px 5px;
+  font-size: 0.8rem;
+  color: white;
+  transform: translate(5%, 15%);
+}
+
+footer {
+  background-color: rgba(60, 60, 60, 0.98);
+  color: white;
+  text-align: right;
+  font-size: small;
+  font-style: oblique;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Reservation popup */
+
+#curtain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #9996;
+  backdrop-filter: blur(10px);
+}
+
+#close-btn {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 2rem;
+}
+
+#close-btn:hover {
+  cursor: pointer;
+  color: white;
+}
+
+/* End of Reservation popup */
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+  #logo {
+    width: 100px;
+    height: auto;
+    transform: scale(2.5);
+    position: relative;
+    left: 75px;
+  }
+
+  #navigationLinks {
+    display: flex;
+  }
+
+  footer {
+    font-size: larger;
+  }
+}
