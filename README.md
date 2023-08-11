@@ -28,9 +28,9 @@
 
 # 📖 About the project <a name="about-project"></a>
 
-**To do application with webpack**
+**Book Reviews Webapp with Webpack**
  
-Building a Leaderboard with API calls
+Discover a curated collection of books with our Book Reviews webapp. Users can "like" titles, leave comments, and for larger teams, reserve books. Built with Webpack for optimized performance, the app seamlessly integrates with external APIs to fetch book details and manage user interactions.
 
 ## 🛠 Built With <a name="built-with"></a>
 
