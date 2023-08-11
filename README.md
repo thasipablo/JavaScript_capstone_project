@@ -49,7 +49,7 @@ Discover a curated collection of books with our Book Reviews webapp. Users can "
 
 - Bundled with Webpack, utilizing ES6 modules.
 - API calls to dynamically fetch and display books.
-- Features to "like" titles, comment, and for larger teams, reserve books.
+- Features to "like" titles, comment, and reserve books.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
